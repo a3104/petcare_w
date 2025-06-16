@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>よくある質問 - キドニーケア・コンシェルジュ</title>
+    <meta name="description" content="キドニーケア・コンシェルジュアプリに関するよくある質問と回答をご覧いただけます。">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+        }
+        
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .faq-header h1 {
+            font-size: 2.5rem;
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+        
+        .faq-category h2 {
+            font-size: 1.5rem;
+            color: #2c5aa0;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e74c3c;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #333;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+        
+        .faq-question i {
+            color: #2c5aa0;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-answer ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #2c5aa0 0%, #667eea 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .contact-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-section p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .contact-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-heart"></i>
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <span>キドニーケア・コンシェルジュ</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+                    <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    <li><a href="terms.html">利用規約</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="faq-container">
+        <div class="faq-header">
+            <h1>よくある質問</h1>
+            <p>キドニーケア・コンシェルジュに関するよくある質問と回答をまとめました</p>
+        </div>
+
+        <!-- アプリの基本機能について -->
+        <div class="faq-category">
+            <h2><i class="fas fa-mobile-alt"></i> アプリの基本機能について</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>キドニーケア・コンシェルジュはどのようなアプリですか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>慢性腎臓病（CKD）と診断された犬または猫の健康管理を総合的にサポートするアプリです。日々の記録から投薬管理、通院記録まで、ペットの健康状態を一元管理できます。</p>
+                    <p>主な機能：</p>
+                    <ul>
+                        <li>体重管理とグラフ表示</li>
+                        <li>投薬スケジュール管理</li>
+                        <li>健康記録（水分摂取、嘔吐、呼吸数など）</li>
+                        <li>通院記録の管理</li>
+                        <li>トイレ記録と異常検知</li>
+                        <li>イベントカレンダー</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>アプリは無料で使用できますか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、基本機能は完全無料でご利用いただけます。データはお使いのデバイスに安全に保存され、追加料金は一切発生しません。</p>
+                    <p>将来的にプレミアム機能（クラウド同期、高度な分析機能など）を提供する予定ですが、基本的な健康管理機能は永続的に無料でご利用いただけます。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>対応しているデバイスは何ですか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>以下のデバイスに対応しています：</p>
+                    <ul>
+                        <li><strong>iOS:</strong> iPhone（iOS 12.0以降）、iPad</li>
+                        <li><strong>Android:</strong> Android 6.0以降のスマートフォン・タブレット</li>
+                    </ul>
+                    <p>最適な動作のため、最新のOSバージョンでのご利用をお勧めします。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- データ管理について -->
+        <div class="faq-category">
+            <h2><i class="fas fa-database"></i> データ管理について</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>データはどこに保存されますか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>お客様のプライバシーを最優先に考え、すべてのデータはお使いのデバイス内にローカル保存されます。外部サーバーには一切送信されません。</p>
+                    <p>これにより、以下のメリットがあります：</p>
+                    <ul>
+                        <li>完全なプライバシー保護</li>
+                        <li>インターネット接続なしでも利用可能</li>
+                        <li>データ漏洩のリスクがゼロ</li>
+                        <li>高速なデータアクセス</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>データのバックアップはできますか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>現在、データのエクスポート機能を開発中です。将来的には以下の方法でデータをバックアップできるようになります：</p>
+                    <ul>
+                        <li>CSVファイルでのエクスポート</li>
+                        <li>PDFレポートの生成</li>
+                        <li>クラウド同期機能（プレミアム機能として予定）</li>
+                    </ul>
+                    <p>現在は、デバイスの標準的なバックアップ機能（iCloudバックアップ、Googleバックアップ）をご利用ください。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>複数のペットを管理できますか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、複数のペットを登録・管理できます。各ペットごとに独立したデータを管理し、簡単に切り替えて記録や確認ができます。</p>
+                    <p>多頭飼いの方でも安心してご利用いただけます。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 機能の使い方について -->
+        <div class="faq-category">
+            <h2><i class="fas fa-question-circle"></i> 機能の使い方について</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>投薬の通知機能はありますか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、投薬管理機能には通知機能が含まれています。</p>
+                    <ul>
+                        <li>設定した時間に自動で通知</li>
+                        <li>複数の薬を個別に管理</li>
+                        <li>服薬間隔の自動計算</li>
+                        <li>終了日の設定</li>
+                    </ul>
+                    <p>通知を受け取るには、アプリインストール時に通知許可を有効にしてください。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>体重の異常はどのように検知されますか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>アプリは以下の基準で体重の異常を自動検知します：</p>
+                    <ul>
+                        <li>1週間で5%以上の体重変化</li>
+                        <li>1ヶ月で10%以上の体重変化</li>
+                        <li>継続的な体重減少傾向</li>
+                    </ul>
+                    <p>異常を検知した場合、アラート通知でお知らせし、早期の獣医師への相談をお勧めします。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>獣医師とデータを共有できますか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、記録したデータは獣医師との診察時に活用できます。</p>
+                    <ul>
+                        <li>グラフやチャートでの視覚的な表示</li>
+                        <li>期間を指定したデータの表示</li>
+                        <li>画面を見せながらの説明が可能</li>
+                    </ul>
+                    <p>将来的には、PDFレポート生成機能も追加予定です。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- トラブルシューティング -->
+        <div class="faq-category">
+            <h2><i class="fas fa-tools"></i> トラブルシューティング</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>アプリが正常に動作しない場合はどうすればよいですか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>以下の手順をお試しください：</p>
+                    <ul>
+                        <li>アプリを完全に終了し、再起動する</li>
+                        <li>デバイスを再起動する</li>
+                        <li>アプリを最新バージョンに更新する</li>
+                        <li>デバイスのストレージ容量を確認する</li>
+                    </ul>
+                    <p>それでも解決しない場合は、お問い合わせフォームからご連絡ください。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>通知が届かない場合はどうすればよいですか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>以下の設定をご確認ください：</p>
+                    <ul>
+                        <li>デバイスの通知設定でアプリの通知が有効になっているか</li>
+                        <li>アプリ内の通知設定が正しく設定されているか</li>
+                        <li>デバイスのサイレントモードが解除されているか</li>
+                        <li>バッテリー最適化設定でアプリが除外されているか</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>データが消えてしまった場合はどうすればよいですか？</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>データの復旧について：</p>
+                    <ul>
+                        <li>デバイスのバックアップから復元を試す</li>
+                        <li>アプリを再インストールする前に、デバイスのバックアップを確認</li>
+                        <li>iCloudやGoogleバックアップが有効な場合、そこから復元可能な場合があります</li>
+                    </ul>
+                    <p>データ保護のため、定期的なデバイスバックアップをお勧めします。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- お問い合わせセクション -->
+        <div class="contact-section">
+            <h3>他にご質問がございますか？</h3>
+            <p>上記で解決しない問題や、その他のご質問がございましたら、お気軽にお問い合わせください。</p>
+            <a href="mailto:support@kidneycare-app.com" class="contact-btn">
+                <i class="fas fa-envelope"></i>
+                お問い合わせ
+            </a>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>キドニーケア・コンシェルジュ</h3>
+                    <p>愛するペットの健康管理をサポートするアプリです。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>ページ</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="faq.html">よくある質問</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="terms.html">利用規約</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="mailto:support@kidneycare-app.com">お問い合わせ</a></li>
+                        <li><a href="faq.html">よくある質問</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 キドニーケア・コンシェルジュ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ アコーディオン機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    // 他のFAQを閉じる
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== this) {
+                            otherQuestion.classList.remove('active');
+                            otherQuestion.nextElementSibling.classList.remove('active');
+                        }
+                    });
+                    
+                    // 現在のFAQを切り替え
+                    this.classList.toggle('active');
+                    answer.classList.toggle('active');
+                });
+            });
+
+            // モバイルメニューの処理
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (navToggle) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
