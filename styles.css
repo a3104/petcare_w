@@ -393,8 +393,10 @@ body {
 
 .screenshots-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .screenshot-item {
@@ -404,15 +406,25 @@ body {
 .screenshot-mockup {
     background: white;
     border-radius: 20px;
-    padding: 3rem 2rem;
+    padding: 1.5rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-    height: 300px;
+    height: auto;
+    min-height: 400px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
+}
+
+.screenshot-mockup img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .screenshot-mockup::before {
@@ -423,7 +435,7 @@ body {
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    opacity: 0.1;
+    opacity: 0.05;
 }
 
 .screenshot-mockup:hover {
@@ -632,6 +644,16 @@ body {
     .benefit-item {
         flex-direction: column;
         text-align: center;
+    }
+    
+    .screenshots-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .screenshot-mockup {
+        min-height: 350px;
+        padding: 1rem;
     }
     
     .download-buttons {
